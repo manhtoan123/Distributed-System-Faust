@@ -323,7 +323,7 @@ python producer.py -n 50 -i 0.5 -f 0.3
 
 ---
 
-## 8. Ghi chú cho giáo viên — Cách kiểm chứng tính phân tán
+## 8.  Cách kiểm chứng tính phân tán
 
 ### ✅ **Kiểm chứng Distributed Processing:**
 
