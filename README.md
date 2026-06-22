@@ -395,12 +395,8 @@ pip install faust-streaming==0.10.14
 
 ## 11. Nhân viên dự án
 
-| Sinh viên | Vai trò |
-|-----------|--------|
-| (Họ tên) | (Vai trò) |
+| Sinh viên        | 
+|------------------|
+| Nguyễn Mạnh Toàn | 
 
----
 
-**Ngày nộp:** [Ngày tháng năm]  
-**Lớp:** [Lớp học]  
-**Môn học:** Ứng dụng Phân tán
