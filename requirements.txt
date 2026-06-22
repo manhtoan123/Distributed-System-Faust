@@ -1,0 +1,4 @@
+faust-streaming==0.10.14
+kafka-python==2.0.2
+aiohttp==3.9.5
+click==8.1.7
