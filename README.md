@@ -323,7 +323,7 @@ python producer.py -n 50 -i 0.5 -f 0.3
 
 ---
 
-## 8. Ghi chú cho giáo viên — Cách kiểm chứng tính phân tán
+## 8.  Cách kiểm chứng tính phân tán
 
 ### ✅ **Kiểm chứng Distributed Processing:**
 
@@ -395,12 +395,8 @@ pip install faust-streaming==0.10.14
 
 ## 11. Nhân viên dự án
 
-| Sinh viên | Vai trò |
-|-----------|--------|
-| (Họ tên) | (Vai trò) |
+| Sinh viên        | 
+|------------------|
+| Nguyễn Mạnh Toàn | 
 
----
 
-**Ngày nộp:** [Ngày tháng năm]  
-**Lớp:** [Lớp học]  
-**Môn học:** Ứng dụng Phân tán
