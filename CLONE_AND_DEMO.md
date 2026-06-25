@@ -141,7 +141,7 @@ yyyyy          confluentinc/cp-zookeeper:7.5.0   Up 3 sec
 #### Terminal A — Worker 1
 
 ```bash
-faust -A app_base worker -l info
+python -m faust -A app_base worker -l info
 ```
 
 Chờ khoảng 2-3 giây:
@@ -156,7 +156,7 @@ INFO: app.agent: Topic 'orders' partitions ready
 **Mở tab/terminal mới:**
 
 ```bash
-faust -A app_base worker -l info --web-port 6067
+python -m faust -A app_base worker -l info --web-port 6067
 ```
 
 #### Terminal C — Producer
@@ -222,13 +222,13 @@ python producer.py -n 15 -i 0.8
 #### Terminal A — Worker 1
 
 ```bash
-faust -A feature1_dlq worker -l info
+python -m faust -A feature1_dlq worker -l info
 ```
 
 #### Terminal B — Worker 2
 
 ```bash
-faust -A feature1_dlq worker -l info --web-port 6067
+python -m faust -A feature1_dlq worker -l info --web-port 6067
 ```
 
 #### Terminal C — Producer (40% fail-rate)
@@ -299,13 +299,13 @@ python producer.py -n 20 -i 1.5 -f 0.4
 #### Terminal A — Worker 1
 
 ```bash
-faust -A feature2_metrics worker -l info
+python -m faust -A feature2_metrics worker -l info
 ```
 
 #### Terminal B — Worker 2
 
 ```bash
-faust -A feature2_metrics worker -l info --web-port 6067
+python -m faust -A feature2_metrics worker -l info --web-port 6067
 ```
 
 #### Terminal C — Producer
@@ -387,13 +387,13 @@ curl http://localhost:6066/metrics/throughput | python -m json.tool
 
 ```bash
 # Terminal A
-faust -A feature2_metrics worker -l info
+python -m faust -A feature2_metrics worker -l info
 
 # Terminal B
-faust -A feature2_metrics worker -l info --web-port 6067
+python -m faust -A feature2_metrics worker -l info --web-port 6067
 
 # Terminal C
-faust -A feature2_metrics worker -l info --web-port 6068
+python -m faust -A feature2_metrics worker -l info --web-port 6068
 ```
 
 #### Send More Data

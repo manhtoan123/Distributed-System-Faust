@@ -66,10 +66,10 @@ docker ps   # Nên thấy 2 containers
 
 ```bash
 # Terminal A
-faust -A feature2_metrics worker -l info
+python -m faust -A feature2_metrics worker -l info
 
 # Terminal B
-faust -A feature2_metrics worker -l info --web-port 6067
+python -m faust -A feature2_metrics worker -l info --web-port 6067
 
 # Terminal C
 python producer.py -n 50 -i 0.5
@@ -152,15 +152,27 @@ docker-compose down -v
 
 ## 📞 LỖI PHỔ BIẾN & FIX
 
+### ❌ "faust command not found"
+
+**Fix - Dùng `python -m faust` thay vì chỉ `faust`:**
+
+```bash
+# Nếu lỗi này, dùng:
+python -m faust -A app_base worker -l info
+
+# Thay vì:
+faust -A app_base worker -l info
+```
+
+**Hoặc cài lại:**
+```bash
+pip install --upgrade faust-streaming
+```
+
 ### ❌ "Port 9092 already in use"
 ```bash
 docker-compose down
 docker-compose up -d
-```
-
-### ❌ "faust command not found"
-```bash
-pip install faust-streaming
 ```
 
 ### ❌ "Containers not running"

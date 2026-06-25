@@ -99,7 +99,7 @@ Thể hiện: **Topics, Agents, Distributed Tables**
 
 ```bash
 cd Distributed-System-Faust
-faust -A app_base worker -l info
+python -m faust -A app_base worker -l info
 ```
 
 **Chờ khoảng 3-5 giây, bạn sẽ thấy:**
@@ -118,7 +118,7 @@ faust -A app_base worker -l info
 
 ```bash
 cd Distributed-System-Faust
-faust -A app_base worker -l info --web-port 6067
+python -m faust -A app_base worker -l info --web-port 6067
 ```
 
 **Chờ 2-3 giây, sẽ thấy:**
@@ -214,14 +214,14 @@ Thể hiện: **Exponential Backoff, Distributed Error Tracking, DLQ Alert**
 
 ```bash
 cd Distributed-System-Faust
-faust -A feature1_dlq worker -l info
+python -m faust -A feature1_dlq worker -l info
 ```
 
 ### Bước 3: Terminal B — Worker 2
 
 ```bash
 cd Distributed-System-Faust
-faust -A feature1_dlq worker -l info --web-port 6067
+python -m faust -A feature1_dlq worker -l info --web-port 6067
 ```
 
 ### Bước 4: Terminal C — Gửi Data (40% fail)
@@ -320,14 +320,14 @@ Thể hiện: **Real-time Metrics, HTTP API, Interactive Dashboard**
 
 ```bash
 cd Distributed-System-Faust
-faust -A feature2_metrics worker -l info
+python -m faust -A feature2_metrics worker -l info
 ```
 
 ### Bước 3: Terminal B — Worker 2
 
 ```bash
 cd Distributed-System-Faust
-faust -A feature2_metrics worker -l info --web-port 6067
+python -m faust -A feature2_metrics worker -l info --web-port 6067
 ```
 
 ### Bước 4: Terminal C — Gửi Data (liên tục)
@@ -496,13 +496,13 @@ Thể hiện: **Kafka Auto-rebalancing, Distributed State Consistency**
 ```bash
 # Terminal A
 cd Distributed-System-Faust
-faust -A feature2_metrics worker -l info
+python -m faust -A feature2_metrics worker -l info
 
 # Terminal B
-faust -A feature2_metrics worker -l info --web-port 6067
+python -m faust -A feature2_metrics worker -l info --web-port 6067
 
 # Terminal C
-faust -A feature2_metrics worker -l info --web-port 6068
+python -m faust -A feature2_metrics worker -l info --web-port 6068
 ```
 
 ### Bước 5: Terminal D — Gửi Nhiều Data

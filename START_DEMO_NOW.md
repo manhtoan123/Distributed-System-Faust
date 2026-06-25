@@ -155,10 +155,10 @@ curl http://localhost:6066/metrics/summary
 
 ```bash
 # Terminal 1
-faust -A feature2_metrics worker -l info
+python -m faust -A feature2_metrics worker -l info
 
 # Terminal 2
-faust -A feature2_metrics worker -l info --web-port 6067
+python -m faust -A feature2_metrics worker -l info --web-port 6067
 
 # Terminal 3
 python producer.py -n 50 -i 0.5
